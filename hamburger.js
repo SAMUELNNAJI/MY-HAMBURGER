@@ -2,5 +2,10 @@ const toggle = document.querySelector('.toggle');
 const hamburger = document.querySelector('nav');
 
 toggle.addEventListener('click', () => {
-    hamburger.style.display = hamburger.style.display === 'flex' ? 'none' : 'flex';
+    if (hamburger.style.display === 'flex') {
+        hamburger.style.display = 'none';
+
+    } else {
+        hamburger.style.display = 'flex';
+    }
 })
