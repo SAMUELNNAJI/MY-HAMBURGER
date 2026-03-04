@@ -39,6 +39,7 @@ header {
 }
 
 
+
 @keyframes scale {
     0% {
         transform: scale(0);
@@ -51,17 +52,50 @@ header {
     }
 }
 
+.popup {
+    display: none;
+    background-color: rgb(141, 247, 28);
+    width: 75%;
+    border-radius: 12px;
+    padding: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 2px 4px 13px #fcd5d5,
+        -2px -4px 13px #9c8d0abb;
+}
+
+.popActive {
+    display: block;
+}
+
+.cancle {
+    position: relative;
+    left: 100%;
+    top: -20px;
+    background-color: rgb(65, 12, 3);
+    padding: 0.4rem;
+    border-radius: 10%;
+    width: fit-content;
+    height: 30px;
+}
+
 @media (max-width: 1114px) {
     header {
         justify-content: space-between;
+        padding: 0.5rem;
 
+        h1 {
+            font-size: 1.7rem;
+        }
 
         nav {
             display: none;
             position: absolute;
             top: 100px;
             right: 0;
-            background-color: rgb(254, 152, 0);
+            background-color: rgb(242, 145, 0);
             width: 80%;
             border-radius: 9px;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3),
@@ -69,10 +103,14 @@ header {
             animation: scale 0.7s ease;
         }
 
+        .active {
+            display: flex;
+        }
+
         nav li {
             display: flex;
-            justify-content: center;
-            padding: 2rem;
+            padding: 1rem;
+            margin-bottom: 40px;
 
         }
 
@@ -80,6 +118,7 @@ header {
             font-size: 1.5rem;
             color: #fdfdfd;
         }
+
 
         button {
             width: 65px;
@@ -91,8 +130,8 @@ header {
 
         span {
             display: flex;
-            width: 50px;
-            height: 7px;
+            width: 40px;
+            height: 5px;
             background-color: #fdfdfd;
             margin: 10px;
 
@@ -103,7 +142,7 @@ header {
             cursor: pointer;
         }
 
-}
+    }
 
-    
+
 }
